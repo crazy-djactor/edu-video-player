@@ -3,9 +3,6 @@ import ReactPlayer from 'react-player';
 import screenfull from 'screenfull'
 import './VideoPlayer.css';
 
-
-
-
 const VideoPlayer: React.FC<{videoUrl: string}> = ({ videoUrl }) => {
     const playerRef = useRef<ReactPlayer>(null);
     const [playing, setPlaying] = useState(true);
@@ -14,19 +11,7 @@ const VideoPlayer: React.FC<{videoUrl: string}> = ({ videoUrl }) => {
 
     const handleFullScreen = () => {
         // @ts-ignore
-        screenfull.request(document.querySelector('.react-player'))
-        // if (playerRef.current) {
-        //     const player = playerRef.current.getInternalPlayer();
-        //     if (player.requestFullscreen) {
-        //         player.requestFullscreen();
-        //     } else if (player.webkitRequestFullscreen) {
-        //         player.webkitRequestFullscreen();
-        //     } else if (player.mozRequestFullScreen) {
-        //         player.mozRequestFullScreen();
-        //     } else if (player.msRequestFullscreen) {
-        //         player.msRequestFullscreen();
-        //     }
-        // }
+        screenfull.request(document.querySelector('.react-player'));
     };
 
     const handleSpeedChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
