@@ -1,0 +1,80 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.sidebar li:hover {
+  background-color: #ddd;
+}
+
+.sidebar img {
+  width: 80px;
+  height: 45px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.sidebar p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.video-details {
+  margin-top: 10px;
+}
+
+.video-details h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.video-details p {
+  font-size: 14px;
+  color: #666;
+}
+
+.comments-section {
+  background-color: #fff;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.comments-section h3 {
+  margin-top: 0;
+}

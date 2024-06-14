@@ -1,0 +1,42 @@
+/* VideoPlayer.css */
+.video-player-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+.player-wrapper {
+    width: 480px;
+    height: 270px;
+}
+
+.react-player {
+    margin: 0 auto;
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 10px;
+    color: white;
+}
+
+.controls label {
+    display: flex;
+    align-items: center;
+}
+
+.controls select,
+.controls input[type="range"] {
+    margin-left: 10px;
+}
+
+.fullscreen-button {
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
