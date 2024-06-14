@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import ReactPlayer from 'react-player';
 import screenfull from 'screenfull'
 import './VideoPlayer.css';

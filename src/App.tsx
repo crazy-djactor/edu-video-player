@@ -6,6 +6,7 @@ import VideoForm from './components/VideoForm/VideoForm';
 import {API_URL, FAKE_ID} from "./helpers/Const";
 import Comments from "./components/Comment/Comments";
 import axios from "axios";
+import Modal from "./components/Modal/Modal";
 
 const App: React.FC = () => {
     const [selectedVideo, setSelectedVideo] = useState<{
@@ -13,10 +14,13 @@ const App: React.FC = () => {
         video_url: string, user_id: string, description: string, title: string, num_comments: number, id: string
     } | null>(null);
     const [videoList, setVideoList] = useState([]);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleVideoSubmit = async () => {
         await fetchVideos();
     };
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     const fetchVideos = async () => {
         const params = {
@@ -40,7 +44,11 @@ const App: React.FC = () => {
             {/*<h1>Educational VideoForm Player</h1>*/}
             <div className="sidebar">
                 <VideoList videoList={videoList} onSelectVideo={setSelectedVideo}/>
-                <VideoForm onVideoSubmit={handleVideoSubmit} />
+                {/*<VideoForm onVideoSubmit={handleVideoSubmit}/>*/}
+                <Modal isOpen={isModalOpen} onClose={closeModal}>
+                    <VideoForm onVideoSubmit={handleVideoSubmit} onClose={closeModal} />
+                </Modal>
+                <button onClick={openModal} className="add-video-button">Add New Video</button>
             </div>
             <div className="main-content">
                 {selectedVideo && <VideoPlayer videoUrl={selectedVideo.video_url} />}

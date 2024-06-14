@@ -3,7 +3,7 @@ import axios from 'axios';
 import './VideoForm.css';
 import {API_URL, FAKE_ID} from "../../helpers/Const";
 
-const VideoForm: React.FC<{ onVideoSubmit: () => void }> = ({ onVideoSubmit }) => {
+const VideoForm: React.FC<{ onVideoSubmit: () => void, onClose: () => void }> = ({ onVideoSubmit, onClose }) => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [url, setUrl] = useState('');
@@ -19,6 +19,7 @@ const VideoForm: React.FC<{ onVideoSubmit: () => void }> = ({ onVideoSubmit }) =
             setTitle('');
             setDescription('');
             setUrl('');
+            onClose();
         } catch (error) {
             console.error('Error submitting video:', error);
         }
