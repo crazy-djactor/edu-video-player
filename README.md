@@ -17,7 +17,9 @@ This is a simple web application that allows users to create, comment on, and wa
 4. Start the development server: `npm start`
 
 ## Screenshots
-(Add screenshots of your application here)
+![image](https://github.com/crazy-djactor/edu-video-player/assets/55486131/0dd95de7-e520-4c29-808c-5246250804c7)
+![image](https://github.com/crazy-djactor/edu-video-player/assets/55486131/92ea7fbb-2392-4a75-988d-e424468f9128)
+
 
 ## Testing
 1. Ensure the backend server is running.
